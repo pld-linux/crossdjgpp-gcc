@@ -6,7 +6,7 @@ Summary(pt_BR): Utilitários para desenvolvimento de binários da GNU - DJGPP gcc
 Summary(tr):    GNU geliþtirme araçlarý - DJGPP gcc
 Name:		crossdjgpp-gcc
 Version:	3.0.3
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		Development/Languages
