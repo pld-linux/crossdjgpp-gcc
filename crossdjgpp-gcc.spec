@@ -1,4 +1,5 @@
 Summary:	DJGPP GNU Binary Utility Development Utilities - gcc
+Summary(pl):	Narzêdzia programistyczne GNU DJGPP - gcc
 Name:		crossdjgpp-gcc
 Version:	3.0.3
 Release:	1
@@ -26,42 +27,61 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		gcclib		%{_prefix}/lib/gcc-lib/%{target}/%{version}
 
 %description
-DJGPP is a port of GNU GCC to the DOS environment. (It stands for
-DJ's Gnu Programming Platform, if it has to stand for something, but
-it's best left ambiguous.)
+DJGPP is a port of GNU GCC to the DOS environment. (It stands for DJ's
+Gnu Programming Platform, if it has to stand for something, but it's
+best left ambiguous.)
 
 This package contains cross targeted gcc.
 
-%if %{cxx}
+%description -l pl
+DJGPP to port GNU GCC dla ¶rodowiska DOS (skrót oznacza DJ's Gnu
+Programming Platform, je¶li ju¿ koniecznie ma co¶ oznaczaæ).
+
+Ten pakiet zawiera gcc skompilowane jako kroskompilator.
+
 %package c++
 Summary:	DJGPP GNU Binary Utility Development Utilities - g++
+Summary(pl):	Narzêdzia programistyczne GNU DJGPP - g++
 Group:		Development/Languages
 Group(de):	Entwicklung/Sprachen
 Group(pl):	Programowanie/Jêzyki
 Requires:	%{name} = %{version}
 
 %description c++
-DJGPP is a port of GNU GCC to the DOS environment. (It stands for
-DJ's Gnu Programming Platform, if it has to stand for something, but
-it's best left ambiguous.)
+DJGPP is a port of GNU GCC to the DOS environment. (It stands for DJ's
+Gnu Programming Platform, if it has to stand for something, but it's
+best left ambiguous.)
 
 This package contains cross targeted g++ and (static) libstdc++.
-%endif
+
+%description c++ -l pl
+DJGPP to port GNU GCC dla ¶rodowiska DOS (skrót oznacza DJ's Gnu
+Programming Platform, je¶li ju¿ koniecznie ma co¶ oznaczaæ).
+
+Ten pakiet zawiera g++ skompilowane jako kroskompilator oraz
+(statyczne) libstdc++.
 
 # does this even work?
 %package g77
 Summary:	DJGPP GNU Binary Utility Development Utilities - g77
+Summary(pl):	Narzêdzia programistyczne GNU DJGPP - g77
 Group:		Development/Languages
 Group(de):	Entwicklung/Sprachen
 Group(pl):	Programowanie/Jêzyki
 Requires:	%{name} = %{version}
 
 %description g77
-DJGPP is a port of GNU GCC to the DOS environment. (It stands for
-DJ's Gnu Programming Platform, if it has to stand for something, but
-it's best left ambiguous.)
+DJGPP is a port of GNU GCC to the DOS environment. (It stands for DJ's
+Gnu Programming Platform, if it has to stand for something, but it's
+best left ambiguous.)
 
 This package contains cross targeted g77.
+
+%description g77 -l pl
+DJGPP to port GNU GCC dla ¶rodowiska DOS (skrót oznacza DJ's Gnu
+Programming Platform, je¶li ju¿ koniecznie ma co¶ oznaczaæ).
+
+Ten pakiet zawiera g77 skompilowane jako kroskompilator.
 
 %prep
 %setup -q -n gcc-%{version}
@@ -92,15 +112,15 @@ TEXCONFIG=false ../configure \
 # kluge, we already have full system headers and libraries ready,
 # needed to get right limits.h
 cd gcc
-cp Makefile Makefile.new
-sed -e "s|^SYSTEM_HEADER_DIR.*|SYSTEM_HEADER_DIR := /usr/%{target}/include|" \
+cp -f Makefile Makefile.new
+sed -e "s|^SYSTEM_HEADER_DIR.*|SYSTEM_HEADER_DIR := %{_prefix}/%{target}/include|" \
 	Makefile.new > Makefile
 rm -f Makefile.new
 cd ..
 
 # YAK (Yet Another Kluge) :<
 cd ../libstdc++-v3
-cp configure configure.tmp
+cp -f configure configure.tmp
 # don't use newlib, we want djgpp
 sed -e 's|os_include_dir="config/os/newlib"|#&|' configure.tmp > configure
 cd ../obj-%{target}
@@ -136,7 +156,7 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/libiberty.a
 # the same... make hardlink
 #ln -f $RPM_BUILD_ROOT%{arch}/bin/gcc $RPM_BUILD_ROOT%{_bindir}/%{target}-gcc
 
-%{target}-strip -g $RPM_BUILD_ROOT/%{gcclib}/libgcc.a
+%{target}-strip -g $RPM_BUILD_ROOT%{gcclib}/libgcc.a
 
 %clean
 rm -rf $RPM_BUILD_ROOT
