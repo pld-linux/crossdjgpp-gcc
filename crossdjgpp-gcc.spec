@@ -28,6 +28,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		arch		%{_prefix}/%{target}
 %define		gccarch		%{_prefix}/lib/gcc-lib/%{target}
 %define		gcclib		%{_prefix}/lib/gcc-lib/%{target}/%{version}
+%define		no_install_post_strip	1
+
 
 %description
 DJGPP is a port of GNU GCC to the DOS environment. (It stands for DJ's
@@ -144,10 +146,10 @@ cd obj-%{target}
 PATH=$PATH:/sbin:%{_sbindir}
 
 %{__make} -C gcc install \
-	prefix=$RPM_BUILD_ROOT%{_prefix} \
-	mandir=$RPM_BUILD_ROOT%{_mandir} \
-	infodir=$RPM_BUILD_ROOT%{_infodir} \
-	gxx_include_dir=$RPM_BUILD_ROOT%{arch}/include/g++ \
+	prefix=%{_prefix} \
+	mandir=%{_mandir} \
+	infodir=%{_infodir} \
+	gxx_include_dir=%{arch}/include/g++ \
 	DESTDIR=$RPM_BUILD_ROOT
 
 # c++filt is provided by binutils
@@ -176,8 +178,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{gccarch}
 %dir %{gcclib}
 %attr(755,root,root) %{gcclib}/cc1
-%attr(755,root,root) %{gcclib}/tradcpp0
-%attr(755,root,root) %{gcclib}/cpp0
+#%attr(755,root,root) %{gcclib}/tradcpp0
+#%attr(755,root,root) %{gcclib}/cpp0
 %attr(755,root,root) %{gcclib}/collect2
 #%%{gcclib}/SYSCALLS.c.X
 %{gcclib}/libgcc.a
