@@ -42,7 +42,7 @@ Ten pakiet zawiera gcc skompilowane jako kroskompilator.
 Summary:	DJGPP GNU Binary Utility Development Utilities - g++
 Summary(pl):	Narzêdzia programistyczne GNU DJGPP - g++
 Group:		Development/Languages
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{epoch}:%{version}
 
 %description c++
 DJGPP is a port of GNU GCC to the DOS environment. (It stands for DJ's
@@ -63,7 +63,7 @@ Ten pakiet zawiera g++ skompilowane jako kroskompilator oraz
 Summary:	DJGPP GNU Binary Utility Development Utilities - g77
 Summary(pl):	Narzêdzia programistyczne GNU DJGPP - g77
 Group:		Development/Languages
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{epoch}:%{version}
 
 %description g77
 DJGPP is a port of GNU GCC to the DOS environment. (It stands for DJ's
