@@ -163,27 +163,27 @@ rm -rf $RPM_BUILD_ROOT
 #%attr(755,root,root) %{arch}/bin/cpp
 #%attr(755,root,root) %{arch}/bin/gcc
 #%attr(755,root,root) %{arch}/bin/gcov
-#%{arch}/include/_G_config.h
+#%%{arch}/include/_G_config.h
 %dir %{gccarch}
 %dir %{gcclib}
 %attr(755,root,root) %{gcclib}/cc1
 %attr(755,root,root) %{gcclib}/tradcpp0
 %attr(755,root,root) %{gcclib}/cpp0
 %attr(755,root,root) %{gcclib}/collect2
-#%{gcclib}/SYSCALLS.c.X
+#%%{gcclib}/SYSCALLS.c.X
 %{gcclib}/libgcc.a
 %{gcclib}/specs*
 %dir %{gcclib}/include
 %{gcclib}/include/*.h
-#%{gcclib}/include/iso646.h
-#%{gcclib}/include/limits.h
-#%{gcclib}/include/proto.h
-#%{gcclib}/include/stdarg.h
-#%{gcclib}/include/stdbool.h
-#%{gcclib}/include/stddef.h
-#%{gcclib}/include/syslimits.h
-#%{gcclib}/include/varargs.h
-#%{gcclib}/include/va-*.h
+#%%{gcclib}/include/iso646.h
+#%%{gcclib}/include/limits.h
+#%%{gcclib}/include/proto.h
+#%%{gcclib}/include/stdarg.h
+#%%{gcclib}/include/stdbool.h
+#%%{gcclib}/include/stddef.h
+#%%{gcclib}/include/syslimits.h
+#%%{gcclib}/include/varargs.h
+#%%{gcclib}/include/va-*.h
 %{_mandir}/man1/%{target}-gcc.1*
 
 %if %{cxx}
