@@ -102,7 +102,7 @@ TEXCONFIG=false ../configure \
 	--mandir=%{_mandir} \
 	--disable-shared \
 	--enable-haifa \
-        --enable-languages="c,f77,gcov" \
+        --enable-languages="c,f77" \
 	--enable-long-long \
 	--enable-namespaces \
 	--with-gnu-as \
