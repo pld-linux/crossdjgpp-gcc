@@ -24,12 +24,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		cxx		0
 %define		target		i386-pc-msdosdjgpp
-%define		_prefix		/usr
 %define		arch		%{_prefix}/%{target}
-%define		gccarch		%{_prefix}/lib/gcc-lib/%{target}
-%define		gcclib		%{_prefix}/lib/gcc-lib/%{target}/%{version}
+%define		gccarch		%{_libdir}/gcc-lib/%{target}
+%define		gcclib		%{_libdir}/gcc-lib/%{target}/%{version}
 %define		no_install_post_strip	1
-
 
 %description
 DJGPP is a port of GNU GCC to the DOS environment. (It stands for DJ's
@@ -52,7 +50,7 @@ Ten pakiet zawiera gcc generuj±ce skro¶nie kod dla DOS.
 Summary:	DJGPP GNU Binary Utility Development Utilities - g++
 Summary(pl):	Narzêdzia programistyczne GNU DJGPP - g++
 Group:		Development/Languages
-Requires:	%{name} = %{epoch}:%{version}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description c++
 DJGPP is a port of GNU GCC to the DOS environment. (It stands for DJ's
@@ -73,7 +71,7 @@ Ten pakiet zawiera g++ skompilowane jako kompilator skro¶ny oraz
 Summary:	DJGPP GNU Binary Utility Development Utilities - g77
 Summary(pl):	Narzêdzia programistyczne GNU DJGPP - g77
 Group:		Development/Languages
-Requires:	%{name} = %{epoch}:%{version}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description g77
 DJGPP is a port of GNU GCC to the DOS environment. (It stands for DJ's
@@ -102,6 +100,9 @@ TEXCONFIG=false ../configure \
 	--prefix=%{_prefix} \
 	--infodir=%{_infodir} \
 	--mandir=%{_mandir} \
+	--bindir=%{_bindir} \
+	--libdir=%{_libdir} \
+	--libexecdir=%{_libdir} \
 	--disable-shared \
 	--enable-haifa \
         --enable-languages="c,f77" \
@@ -140,7 +141,7 @@ cd ..
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{/lib,%{_datadir},%{_bindir}}
+install -d $RPM_BUILD_ROOT{%{_datadir},%{_bindir}}
 
 cd obj-%{target}
 PATH=$PATH:/sbin:%{_sbindir}
