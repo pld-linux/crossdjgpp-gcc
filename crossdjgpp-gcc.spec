@@ -11,7 +11,7 @@ Epoch:		1
 License:	GPL
 Group:		Development/Languages
 Source0:	ftp://gcc.gnu.org/pub/gcc/releases/gcc-%{version}/gcc-%{version}.tar.bz2
-# Source0-md5:	d94d66619d69d9fd27717409c8a67740
+# Source0-md5:	65999f654102f5438ac8562d13a6eced
 BuildRequires:	crossdjgpp-platform
 BuildRequires:	crossdjgpp-binutils
 BuildRequires:	flex
