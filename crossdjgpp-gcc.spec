@@ -1,5 +1,9 @@
-Summary:	DJGPP GNU Binary Utility Development Utilities - gcc
-Summary(pl):	Narzêdzia programistyczne GNU DJGPP - gcc
+Summary:	DJGPP GNU binary utility development utilities - gcc
+Summary(es):	Utilitarios para desarrollo de binarios de la GNU - DJGPP gcc
+Summary(fr):	Utilitaires de développement binaire de GNU - DJGPP gcc
+Summary(pl):	Skro¶ne narzêdzia programistyczne GNU dla DJGPP - gcc
+Summary(pt_BR): Utilitários para desenvolvimento de binários da GNU - DJGPP gcc
+Summary(tr):    GNU geliþtirme araçlarý - DJGPP gcc
 Name:		crossdjgpp-gcc
 Version:	3.0.3
 Release:	1
@@ -32,11 +36,15 @@ best left ambiguous.)
 
 This package contains cross targeted gcc.
 
+%description -l de
+Dieses Paket enthält einen Cross-gcc, der es erlaubt, auf einem
+i386-Rechner Code für DOS zu generieren.
+
 %description -l pl
 DJGPP to port GNU GCC dla ¶rodowiska DOS (skrót oznacza DJ's Gnu
 Programming Platform, je¶li ju¿ koniecznie ma co¶ oznaczaæ).
 
-Ten pakiet zawiera gcc skompilowane jako kompilator skro¶ny.
+Ten pakiet zawiera gcc generuj±ce skro¶nie kod dla DOS.
 
 %package c++
 Summary:	DJGPP GNU Binary Utility Development Utilities - g++
