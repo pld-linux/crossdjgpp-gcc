@@ -36,7 +36,7 @@ This package contains cross targeted gcc.
 DJGPP to port GNU GCC dla ¶rodowiska DOS (skrót oznacza DJ's Gnu
 Programming Platform, je¶li ju¿ koniecznie ma co¶ oznaczaæ).
 
-Ten pakiet zawiera gcc skompilowane jako kroskompilator.
+Ten pakiet zawiera gcc skompilowane jako kompilator skro¶ny.
 
 %package c++
 Summary:	DJGPP GNU Binary Utility Development Utilities - g++
@@ -55,7 +55,7 @@ This package contains cross targeted g++ and (static) libstdc++.
 DJGPP to port GNU GCC dla ¶rodowiska DOS (skrót oznacza DJ's Gnu
 Programming Platform, je¶li ju¿ koniecznie ma co¶ oznaczaæ).
 
-Ten pakiet zawiera g++ skompilowane jako kroskompilator oraz
+Ten pakiet zawiera g++ skompilowane jako kompilator skro¶ny oraz
 (statyczne) libstdc++.
 
 # does this even work?
@@ -76,7 +76,7 @@ This package contains cross targeted g77.
 DJGPP to port GNU GCC dla ¶rodowiska DOS (skrót oznacza DJ's Gnu
 Programming Platform, je¶li ju¿ koniecznie ma co¶ oznaczaæ).
 
-Ten pakiet zawiera g77 skompilowane jako kroskompilator.
+Ten pakiet zawiera g77 skompilowane jako kompilator skro¶ny.
 
 %prep
 %setup -q -n gcc-%{version}
