@@ -81,9 +81,9 @@ Ten pakiet zawiera g77 skompilowane jako kroskompilator.
 %setup -q -n gcc-%{version}
 
 %build
-rm -rf obj-%{target} 
+rm -rf obj-%{target}
 install -d obj-%{target}
-cd obj-%{target} 
+cd obj-%{target}
 
 CFLAGS="%{rpmcflags}" \
 CXXFLAGS="%{rpmcflags}" \
@@ -126,7 +126,7 @@ cd ..
 #LDFLAGS_FOR_TARGET="%{rpmldflags}"
 
 %{__make} -C obj-%{target}
-	
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{/lib,%{_datadir},%{_bindir}}
