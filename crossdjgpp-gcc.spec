@@ -6,8 +6,6 @@ Release:	1
 Epoch:		1
 License:	GPL
 Group:		Development/Languages
-Group(de):	Entwicklung/Sprachen
-Group(pl):	Programowanie/Jêzyki
 Source0:	ftp://ftp.gnu.org/pub/gnu/gcc-%{version}.tar.bz2
 BuildRequires:	crossdjgpp-platform
 BuildRequires:	crossdjgpp-binutils
@@ -43,8 +41,6 @@ Ten pakiet zawiera gcc skompilowane jako kroskompilator.
 Summary:	DJGPP GNU Binary Utility Development Utilities - g++
 Summary(pl):	Narzêdzia programistyczne GNU DJGPP - g++
 Group:		Development/Languages
-Group(de):	Entwicklung/Sprachen
-Group(pl):	Programowanie/Jêzyki
 Requires:	%{name} = %{version}
 
 %description c++
@@ -66,8 +62,6 @@ Ten pakiet zawiera g++ skompilowane jako kroskompilator oraz
 Summary:	DJGPP GNU Binary Utility Development Utilities - g77
 Summary(pl):	Narzêdzia programistyczne GNU DJGPP - g77
 Group:		Development/Languages
-Group(de):	Entwicklung/Sprachen
-Group(pl):	Programowanie/Jêzyki
 Requires:	%{name} = %{version}
 
 %description g77
