@@ -1,13 +1,13 @@
 Summary:	DJGPP GNU Binary Utility Development Utilities - gcc
 Name:		crossdjgpp-gcc
-Version:	3.0.2
+Version:	3.0.3
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Development/Languages
 Group(de):	Entwicklung/Sprachen
 Group(pl):	Programowanie/Jêzyki
-Source0:	ftp://ftp.gnu.org/pub/gnu/gcc-%{version}-20011014.tar.gz
+Source0:	ftp://ftp.gnu.org/pub/gnu/gcc-%{version}.tar.bz2
 BuildRequires:	crossdjgpp-platform
 BuildRequires:	crossdjgpp-binutils
 BuildRequires:	flex
@@ -64,7 +64,7 @@ it's best left ambiguous.)
 This package contains cross targeted g77.
 
 %prep
-%setup -q -n gcc-%{version}-20011014
+%setup -q -n gcc-%{version}
 
 %build
 rm -rf obj-%{target} 
@@ -104,6 +104,7 @@ cp configure configure.tmp
 # don't use newlib, we want djgpp
 sed -e 's|os_include_dir="config/os/newlib"|#&|' configure.tmp > configure
 cd ../obj-%{target}
+# sigh... it still doesn't work, produces sth<char> in assembly
 
 PATH=$PATH:/sbin:%{_sbindir}
 
@@ -112,11 +113,6 @@ cd ..
 
 %{__make} -C obj-%{target}
 	
-#%{__make} -C obj-%{target}/gcc \
-#	LDFLAGS_FOR_TARGET="%{rpmldflags}" \
-#	mandir=%{_mandir} \
-#	infodir=%{_infodir}
-
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{/lib,%{_datadir},%{_bindir}}
