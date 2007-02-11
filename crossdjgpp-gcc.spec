@@ -2,7 +2,6 @@ Summary:	DJGPP GNU binary utility development utilities - gcc
 Summary(es):	Utilitarios para desarrollo de binarios de la GNU - DJGPP gcc
 Summary(fr):	Utilitaires de développement binaire de GNU - DJGPP gcc
 Summary(pl):	Skro¶ne narzêdzia programistyczne GNU dla DJGPP - gcc
-Summary(pt_BR): Utilitários para desenvolvimento de binários da GNU - DJGPP gcc
 Summary(tr):	GNU geliþtirme araçlarý - DJGPP gcc
 Name:		crossdjgpp-gcc
 Version:	3.3.2
