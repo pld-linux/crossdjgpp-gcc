@@ -1,9 +1,9 @@
 Summary:	DJGPP GNU binary utility development utilities - gcc
-Summary(es.UTF-8):   Utilitarios para desarrollo de binarios de la GNU - DJGPP gcc
-Summary(fr.UTF-8):   Utilitaires de développement binaire de GNU - DJGPP gcc
-Summary(pl.UTF-8):   Skrośne narzędzia programistyczne GNU dla DJGPP - gcc
-Summary(pt_BR.UTF-8):   Utilitários para desenvolvimento de binários da GNU - DJGPP gcc
-Summary(tr.UTF-8):   GNU geliştirme araçları - DJGPP gcc
+Summary(es.UTF-8):	Utilitarios para desarrollo de binarios de la GNU - DJGPP gcc
+Summary(fr.UTF-8):	Utilitaires de développement binaire de GNU - DJGPP gcc
+Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla DJGPP - gcc
+Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - DJGPP gcc
+Summary(tr.UTF-8):	GNU geliştirme araçları - DJGPP gcc
 Name:		crossdjgpp-gcc
 Version:	3.3.2
 Release:	2
@@ -49,7 +49,7 @@ Ten pakiet zawiera gcc generujące skrośnie kod dla DOS.
 
 %package c++
 Summary:	DJGPP GNU Binary Utility Development Utilities - g++
-Summary(pl.UTF-8):   Narzędzia programistyczne GNU DJGPP - g++
+Summary(pl.UTF-8):	Narzędzia programistyczne GNU DJGPP - g++
 Group:		Development/Languages
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -70,7 +70,7 @@ Ten pakiet zawiera g++ skompilowane jako kompilator skrośny oraz
 # does this even work?
 %package g77
 Summary:	DJGPP GNU Binary Utility Development Utilities - g77
-Summary(pl.UTF-8):   Narzędzia programistyczne GNU DJGPP - g77
+Summary(pl.UTF-8):	Narzędzia programistyczne GNU DJGPP - g77
 Group:		Development/Languages
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
