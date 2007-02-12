@@ -1,8 +1,9 @@
 Summary:	DJGPP GNU binary utility development utilities - gcc
-Summary(es):	Utilitarios para desarrollo de binarios de la GNU - DJGPP gcc
-Summary(fr):	Utilitaires de développement binaire de GNU - DJGPP gcc
-Summary(pl):	Skro¶ne narzêdzia programistyczne GNU dla DJGPP - gcc
-Summary(tr):	GNU geliþtirme araçlarý - DJGPP gcc
+Summary(es.UTF-8):   Utilitarios para desarrollo de binarios de la GNU - DJGPP gcc
+Summary(fr.UTF-8):   Utilitaires de dÃ©veloppement binaire de GNU - DJGPP gcc
+Summary(pl.UTF-8):   SkroÅ›ne narzÄ™dzia programistyczne GNU dla DJGPP - gcc
+Summary(pt_BR.UTF-8):   UtilitÃ¡rios para desenvolvimento de binÃ¡rios da GNU - DJGPP gcc
+Summary(tr.UTF-8):   GNU geliÅŸtirme araÃ§larÄ± - DJGPP gcc
 Name:		crossdjgpp-gcc
 Version:	3.3.2
 Release:	2
@@ -36,19 +37,19 @@ best left ambiguous.)
 
 This package contains cross targeted gcc.
 
-%description -l de
-Dieses Paket enthält einen Cross-gcc, der es erlaubt, auf einem
-anderem Rechner Code für DOS zu generieren.
+%description -l de.UTF-8
+Dieses Paket enthÃ¤lt einen Cross-gcc, der es erlaubt, auf einem
+anderem Rechner Code fÃ¼r DOS zu generieren.
 
-%description -l pl
-DJGPP to port GNU GCC dla ¶rodowiska DOS (skrót oznacza DJ's Gnu
-Programming Platform, je¶li ju¿ koniecznie ma co¶ oznaczaæ).
+%description -l pl.UTF-8
+DJGPP to port GNU GCC dla Å›rodowiska DOS (skrÃ³t oznacza DJ's Gnu
+Programming Platform, jeÅ›li juÅ¼ koniecznie ma coÅ› oznaczaÄ‡).
 
-Ten pakiet zawiera gcc generuj±ce skro¶nie kod dla DOS.
+Ten pakiet zawiera gcc generujÄ…ce skroÅ›nie kod dla DOS.
 
 %package c++
 Summary:	DJGPP GNU Binary Utility Development Utilities - g++
-Summary(pl):	Narzêdzia programistyczne GNU DJGPP - g++
+Summary(pl.UTF-8):   NarzÄ™dzia programistyczne GNU DJGPP - g++
 Group:		Development/Languages
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -59,17 +60,17 @@ best left ambiguous.)
 
 This package contains cross targeted g++ and (static) libstdc++.
 
-%description c++ -l pl
-DJGPP to port GNU GCC dla ¶rodowiska DOS (skrót oznacza DJ's Gnu
-Programming Platform, je¶li ju¿ koniecznie ma co¶ oznaczaæ).
+%description c++ -l pl.UTF-8
+DJGPP to port GNU GCC dla Å›rodowiska DOS (skrÃ³t oznacza DJ's Gnu
+Programming Platform, jeÅ›li juÅ¼ koniecznie ma coÅ› oznaczaÄ‡).
 
-Ten pakiet zawiera g++ skompilowane jako kompilator skro¶ny oraz
+Ten pakiet zawiera g++ skompilowane jako kompilator skroÅ›ny oraz
 (statyczne) libstdc++.
 
 # does this even work?
 %package g77
 Summary:	DJGPP GNU Binary Utility Development Utilities - g77
-Summary(pl):	Narzêdzia programistyczne GNU DJGPP - g77
+Summary(pl.UTF-8):   NarzÄ™dzia programistyczne GNU DJGPP - g77
 Group:		Development/Languages
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -80,11 +81,11 @@ best left ambiguous.)
 
 This package contains cross targeted g77.
 
-%description g77 -l pl
-DJGPP to port GNU GCC dla ¶rodowiska DOS (skrót oznacza DJ's Gnu
-Programming Platform, je¶li ju¿ koniecznie ma co¶ oznaczaæ).
+%description g77 -l pl.UTF-8
+DJGPP to port GNU GCC dla Å›rodowiska DOS (skrÃ³t oznacza DJ's Gnu
+Programming Platform, jeÅ›li juÅ¼ koniecznie ma coÅ› oznaczaÄ‡).
 
-Ten pakiet zawiera g77 skompilowane jako kompilator skro¶ny.
+Ten pakiet zawiera g77 skompilowane jako kompilator skroÅ›ny.
 
 %prep
 %setup -q -n gcc-%{version}
